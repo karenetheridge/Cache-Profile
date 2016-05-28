@@ -282,7 +282,7 @@ sub report {
                 $report .= sprintf
                     "%s time slowdown: %0.2f%% (%.2fs overhead, %.2fs est. compute time w/o cache)\n",
                     $measure, ( ( $sum - $estimated_without_cache ) / $sum ) * 100,
-                    $cache_overhead, $estimated_without_cache, $measure;
+                    $cache_overhead, $estimated_without_cache;
             } else {
                 $report .= sprintf
                     "%s time speedup: %0.2f%% (%.2fs est. compute time w/o cache)\n",

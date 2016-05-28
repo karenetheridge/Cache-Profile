@@ -1,9 +1,11 @@
 package Cache::Profile::CorrelateMissTiming;
-use Moose;
+# ABSTRACT: Guess the time to compute a cache miss by correlating C<set> and C<get>
 
+our $VERSION = '0.03';
+
+use Moose;
 use Guard;
 use Time::HiRes qw(tv_interval clock gettimeofday);
-
 use namespace::autoclean;
 
 extends qw(Cache::Profile);
@@ -111,13 +113,9 @@ sub _record_set {
 __PACKAGE__->meta->make_immutable;
 
 __PACKAGE__;
+__END__
 
 =pod
-
-=head1 NAME
-
-Cache::Profile::CorrelateMissTiming - Guess the time to compute a cache miss by
-correlating C<set> and C<get>
 
 =head1 SYNOPSIS
 
@@ -127,7 +125,7 @@ correlating C<set> and C<get>
 
 This class will make a guess at the time it took to generate values, by saving
 the time just before returning from a C<get> with a cache miss, until the
-begining of a C<set>.
+beginning of a C<set>.
 
 This value is a guess and may be completely wrong.
 

@@ -1,11 +1,13 @@
 package Cache::Profile;
-use Moose;
+# ABSTRACT: Measure the performance of a cache
 
+our $VERSION = '0.03';
+
+use Moose;
 use Carp;
 use Time::HiRes qw(tv_interval gettimeofday time clock);
 use Try::Tiny;
 use Class::MOP;
-
 use namespace::autoclean;
 
 has cache => (
@@ -311,12 +313,9 @@ sub moniker {
 __PACKAGE__->meta->make_immutable;
 
 __PACKAGE__;
+__END__
 
 =pod
-
-=head1 NAME
-
-Cache::Profile - Measure the performance of a cache
 
 =head1 SYNOPSIS
 

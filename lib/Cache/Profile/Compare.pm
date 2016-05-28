@@ -1,10 +1,11 @@
 package Cache::Profile::Compare;
+# ABSTRACT: Compare several caches
+
+our $VERSION = '0.03';
+
 use Moose;
-
 use Carp qw(croak);
-
 use Cache::Profile::CorrelateMissTiming;
-
 use namespace::autoclean;
 
 has profile_class => (
@@ -116,12 +117,9 @@ __PACKAGE__->meta->make_immutable;
 # ex: set sw=4 et:
 
 __PACKAGE__;
+__END__
 
 =pod
-
-=head1 NAME
-
-Cache::Profile::Compare - compare several caches
 
 =head1 SYNOPSIS
 
@@ -158,6 +156,8 @@ The caches to profile
 A lazy built list of L<Cache::Profile> or
 L<Cache::Profile::CorrelateMissTiming> objects based on C<caches>.
 
+=for stopwords profiler
+
 Can be provided explicitly if you want to create your own profiler objects.
 
 =item profile_class
@@ -184,3 +184,5 @@ Returns the caches sorted by speedup.
 Returns the caches sorted by hit rate.
 
 =back
+
+=cut

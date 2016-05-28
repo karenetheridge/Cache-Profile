@@ -1,0 +1,6 @@
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+/Cache-Profile-*/
+/Cache-Profile-*.tar.gz

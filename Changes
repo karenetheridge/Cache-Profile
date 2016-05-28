@@ -1,8 +1,10 @@
+Revision history for Cache-Profile
 
+{{$NEXT}}
         - Removed remaining uses of for qw( ) (RT #114790)
 
-0.02
-	- Removed deprecated use of for qw( ) (RT #69255)
+0.02    2011-07-05
+        - Removed deprecated use of for qw( ) (RT #69255)
 
-0.01
-	- Initial release
+0.01    2010-06-26
+        - Initial release

@@ -8,20 +8,12 @@ use Try::Tiny;
 use Test::More;
 use List::Util qw(shuffle);
 
-BEGIN {
-    try {
-        require Cache::Ref::FIFO;
-        require Cache::Ref::LRU;
-        require Cache::Ref::CART;
-        require Cache::Ref::CLOCK;
-    } catch {
-        if ( m{^Can't locate Cache/Ref/(?:FIFO|LRU)\.pm} ) {
-            plan skip_all => "Cache::Ref::FIFO and Cache::Ref::LRU required";
-        } else {
-            die $_;
-        }
-    };
-}
+use Test::Needs qw(
+    Cache::Ref::FIFO
+    Cache::Ref::LRU
+    Cache::Ref::CART
+    Cache::Ref::CLOCK
+);
 
 use ok 'Cache::Profile';
 use ok 'Cache::Profile::CorrelateMissTiming';

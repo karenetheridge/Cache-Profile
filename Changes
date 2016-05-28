@@ -1,3 +1,6 @@
+
+        - Removed remaining uses of for qw( ) (RT #114790)
+
 0.02
 	- Removed deprecated use of for qw( ) (RT #69255)
 

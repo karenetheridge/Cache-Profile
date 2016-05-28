@@ -73,7 +73,7 @@ foreach my $method ( "all", @timer_names ) {
     }
 }
 
-foreach my $counter qw(hit_count miss_count) {
+foreach my $counter ( qw(hit_count miss_count) ) {
     has $counter => (
         traits => [qw(Number)],
         isa => "Int",
@@ -222,7 +222,7 @@ sub reset {
     my $self = shift;
 
     foreach my $method ( $self->timer_names ) {
-        foreach my $measure qw(real cpu) {
+        foreach my $measure ( qw(real cpu) ) {
             $self->${\"reset_${method}_${measure}"};
         }
         $self->${\"reset_call_count_$method"};
@@ -258,7 +258,7 @@ sub report {
     foreach my $method ( $self->timer_names, "all" ) {
         if ( my $calls = $self->${\"call_count_$method"} ) {
             my %times;
-            foreach my $measure qw(real cpu) {
+            foreach my $measure ( qw(real cpu) ) {
                 $times{$measure} = $self->${\"total_${measure}_time_${method}"};
             }
 

@@ -147,10 +147,10 @@ foreach my $cache ( $p_cart, $p_lru, $cmp->profiles ) {
 
     cmp_ok( $p_cart->hit_rate, '>=', ( ( $size / @keys ) / 2), "hit rate bigger than minimum" );
 
-    foreach my $method qw(get set miss) {
+    foreach my $method ( qw(get set miss) ) {
         cmp_ok( $cache->${\"call_count_$method"}, '>=', $sigma, "$method called enough times" );
 
-        foreach my $measure qw(real cpu) {
+        foreach my $measure ( qw(real cpu) ) {
             cmp_ok( $cache->${\"total_${measure}_time_${method}"}, '>=', 0.001, "some $measure time accrued for $method" );
         }
     }

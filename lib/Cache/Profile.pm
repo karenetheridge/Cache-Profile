@@ -5,7 +5,7 @@ our $VERSION = '0.04';
 
 use Moose;
 use Carp;
-use Time::HiRes qw(tv_interval gettimeofday time clock);
+use Time::HiRes 1.84 qw(tv_interval gettimeofday time clock);
 use Try::Tiny;
 use Class::MOP;
 use namespace::autoclean;

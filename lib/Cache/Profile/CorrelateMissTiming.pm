@@ -5,7 +5,7 @@ our $VERSION = '0.04';
 
 use Moose;
 use Guard;
-use Time::HiRes qw(tv_interval clock gettimeofday);
+use Time::HiRes 1.84 qw(tv_interval clock gettimeofday);
 use namespace::autoclean;
 
 extends qw(Cache::Profile);

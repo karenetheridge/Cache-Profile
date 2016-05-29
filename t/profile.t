@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Time::HiRes qw(time clock);
+use Time::HiRes 1.84 qw(time clock);
 use Try::Tiny;
 use Test::More;
 use List::Util qw(shuffle);

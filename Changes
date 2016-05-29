@@ -1,6 +1,7 @@
 Revision history for Cache-Profile
 
 {{$NEXT}}
+        - specify minimum required version of Time::HiRes
 
 0.03      2016-05-29 00:19:26Z
         - Removed remaining uses of for qw( ) (RT #114790)

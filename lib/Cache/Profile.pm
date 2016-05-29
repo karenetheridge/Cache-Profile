@@ -1,7 +1,7 @@
 package Cache::Profile;
 # ABSTRACT: Measure the performance of a cache
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use Moose;
 use Carp;

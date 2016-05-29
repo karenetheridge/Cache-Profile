@@ -1,5 +1,7 @@
 Revision history for Cache-Profile
 
+{{$NEXT}}
+
 0.04      2016-05-29 04:13:24Z
         - specify minimum required version of Time::HiRes
 

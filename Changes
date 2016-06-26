@@ -1,6 +1,6 @@
 Revision history for Cache-Profile
 
-{{$NEXT}}
+0.05      2016-06-26 01:56:14Z
         - abort build in Makefile.PL if the OS does not support the necessary
           Time::HiRes interfaces
 

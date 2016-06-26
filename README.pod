@@ -8,7 +8,7 @@ Cache::Profile - Measure the performance of a cache
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

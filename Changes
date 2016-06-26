@@ -1,6 +1,8 @@
 Revision history for Cache-Profile
 
 {{$NEXT}}
+        - abort build in Makefile.PL if the OS does not support the necessary
+          Time::HiRes interfaces
 
 0.04      2016-05-29 04:13:24Z
         - specify minimum required version of Time::HiRes

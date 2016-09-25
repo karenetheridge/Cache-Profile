@@ -1,7 +1,7 @@
 package Cache::Profile::CorrelateMissTiming;
 # ABSTRACT: Guess the time to compute a cache miss by correlating C<set> and C<get>
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 use Moose;
 use Guard;

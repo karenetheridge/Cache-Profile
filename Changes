@@ -1,6 +1,6 @@
 Revision history for Cache-Profile
 
-{{$NEXT}}
+0.06      2016-09-25 03:56:04Z
         - fix trapping of unsupported OS errors in Makefle.PL
 
 0.05      2016-06-26 01:56:14Z

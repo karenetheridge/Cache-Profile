@@ -283,13 +283,16 @@ sub report {
             if ( $sum > $estimated_without_cache ) {
                 $report .= sprintf
                     "%s time slowdown: %0.2f%% (%.2fs overhead, %.2fs est. compute time w/o cache)\n",
-                    $measure, ( ( $sum - $estimated_without_cache ) / $sum ) * 100,
-                    $cache_overhead, $estimated_without_cache;
+                    $measure,
+                    ( ( $sum - $estimated_without_cache ) / $sum ) * 100,
+                    $cache_overhead,
+                    $estimated_without_cache;
             } else {
                 $report .= sprintf
                     "%s time speedup: %0.2f%% (%.2fs est. compute time w/o cache)\n",
-                    $measure, ( ( $estimated_without_cache - $sum ) / $estimated_without_cache ) * 100,
-                    $estimated_without_cache, $measure;
+                    $measure,
+                    ( ( $estimated_without_cache - $sum ) / $estimated_without_cache ) * 100,
+                    $estimated_without_cache;
             }
         }
     }
